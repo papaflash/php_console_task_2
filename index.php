@@ -16,7 +16,7 @@ for($i = 0; $i < MAX_NUMS; ++$i)
         $i--;
         continue;
     }
-    if(COUNT($nums) == 2 && $nums[NUM_ALIAS[$i]] == 0)                             //Проверка второго числа на ноль
+    if(COUNT($nums) == MAX_NUMS && $nums[NUM_ALIAS[$i]] == 0)                             //Проверка второго числа на ноль
     {
         fwrite(STDERR, "Делить на 0 нельзя!". PHP_EOL);
         $i--;
@@ -25,4 +25,4 @@ for($i = 0; $i < MAX_NUMS; ++$i)
 
 $result = "Результат деления " . $nums["первое"] .  "/" . $nums["второе"] . " = "
     . $nums["первое"] / $nums["второе"] . PHP_EOL;
-fwrite(STDOUT, $result  );                                                  //Вывод резуьтата
+fwrite(STDOUT, $result  );                                                  //Вывод результата
